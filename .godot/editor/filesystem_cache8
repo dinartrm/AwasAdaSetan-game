@@ -1,9 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1735449692
+::res://::1735462925
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1728457412::0::1::::<><>::
-gameover.tscn::PackedScene::3284045775852320757::1735449286::0::1::::<><>::res://scripts/gameover.gd
 icon.png::CompressedTexture2D::621515402784007901::1728457412::1735449000::1::::<><>::
-::res://assets/::1735449155
+::res://assets/::1735463003
 ::res://assets/addons/::1735448929
 ::res://assets/addons/colorpicker_presets/::1735448929
 colorpicker_presets.gd::GDScript::-1::1728457412::0::1::::<>EditorPlugin<>::
@@ -28,6 +27,10 @@ slime_body.png::CompressedTexture2D::8645940357922743702::1728457414::1735449063
 slime_body_hurt.png::CompressedTexture2D::3723476765009385039::1728457414::1735449063::1::::<><>::
 slime_face.png::CompressedTexture2D::6595643196702037820::1728457414::1735449063::1::::<><>::
 slime_hurt_eyes.png::CompressedTexture2D::4791010527445338927::1728457414::1735449063::1::::<><>::
+::res://assets/final_interface/::1735463094
+gameover.png::CompressedTexture2D::5664265113590640942::1735462948::1735463103::1::::<><>::
+menu.png::CompressedTexture2D::4017265894243675072::1735462937::1735463104::1::::<><>::
+scene_utama.png::CompressedTexture2D::1097516117838795548::1735462943::1735463104::1::::<><>::
 ::res://assets/font/::1735449168
 JMH HORROR.otf::FontFile::8999097236210146732::1735142194::1735449168::1::::<><>::
 JMH HORROR.ttf::FontFile::8742654996580944546::1735142194::1735449162::1::::<><>::
@@ -51,11 +54,12 @@ smoke_explosion.tscn::PackedScene::7675803860678853612::1735449067::0::1::::<><>
 ::res://assets/trees/::1735449070
 kuburan_3-removebg-preview.png::CompressedTexture2D::569127086385039601::1728490570::1735449070::1::::<><>::
 pine_tree.png::CompressedTexture2D::4806194308614878228::1728457414::1735449070::1::::<><>::
-::res://scenes/::1735449694
-aas_game.tscn::PackedScene::2321580749836557175::1735449286::0::1::::<><>::res://scripts/aas_game.gd<>uid://duhxf584q4y07::::res://scenes/player.tscn<>uid://ddong420siktp::::res://scenes/kuburan.tscn<>uid://secnankmlfk::::res://scenes/pinetree.tscn<>uid://bm120v1b8eamn::::res://gameover.tscn
-control.tscn::PackedScene::4347568350008800245::1735449694::0::1::::<><>::res://scripts/main_menu.gd<>uid://dwtairsx3rs23::::res://assets/font/JMH HORROR.ttf<>uid://d1hh21doa43rs::::res://assets/font/JMH HORROR.otf<>uid://idxo7ujnsky0::::res://assets/trees/kuburan_3-removebg-preview.png
+::res://scenes/::1735462931
+aas_game.tscn::PackedScene::2321580749836557175::1735449718::0::1::::<><>::res://scripts/aas_game.gd<>uid://duhxf584q4y07::::res://scenes/player.tscn<>uid://ddong420siktp::::res://scenes/kuburan.tscn<>uid://secnankmlfk::::res://scenes/pinetree.tscn<>uid://bm120v1b8eamn::::res://scenes/gameover.tscn
+control.tscn::PackedScene::4347568350008800245::1735462931::0::1::::<><>::res://scripts/main_menu.gd<>uid://dwtairsx3rs23::::res://assets/font/JMH HORROR.ttf<>uid://d1hh21doa43rs::::res://assets/font/JMH HORROR.otf<>uid://idxo7ujnsky0::::res://assets/trees/kuburan_3-removebg-preview.png
+gameover.tscn::PackedScene::3284045775852320757::1735449286::0::1::::<><>::res://scripts/gameover.gd
 kuburan.tscn::PackedScene::7399531472266770301::1735449070::0::1::::<><>::uid://b7rhtttevhxtj::::res://assets/characters/ground_shadow.png<>uid://idxo7ujnsky0::::res://assets/trees/kuburan_3-removebg-preview.png
-menu.tscn::PackedScene::9182269383770512487::1735449694::0::1::::<><>::uid://b2682y04nsv4h::::res://scenes/control.tscn
+menu.tscn::PackedScene::9182269383770512487::1735462931::0::1::::<><>::uid://b2682y04nsv4h::::res://scenes/control.tscn
 mob.tscn::PackedScene::2569438109914492468::1735449286::0::1::::<><>::res://scripts/mob.gd<>uid://ogik4s70pgwl::::res://assets/characters/slime/slime.tscn
 peluru.tscn::PackedScene::5427899291017451714::1735449140::0::1::::<><>::res://scripts/peluru.gd<>uid://dftkbqwsfd68r::::res://assets/pistol/projectile.png
 pinetree.tscn::PackedScene::37405922540011904::1735449070::0::1::::<><>::uid://caqfk2xng5v5u::::res://assets/trees/pine_tree.png<>uid://b7rhtttevhxtj::::res://assets/characters/ground_shadow.png
