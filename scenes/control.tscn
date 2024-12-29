@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2682y04nsv4h"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_dlfuu"]
+[ext_resource type="FontFile" uid="uid://dwtairsx3rs23" path="res://assets/font/JMH HORROR.ttf" id="1_risgo"]
+[ext_resource type="FontFile" uid="uid://d1hh21doa43rs" path="res://assets/font/JMH HORROR.otf" id="2_s25q7"]
+[ext_resource type="Texture2D" uid="uid://idxo7ujnsky0" path="res://assets/trees/kuburan_3-removebg-preview.png" id="3_etqf0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_av01o"]
+font = ExtResource("2_s25q7")
+font_size = 180
+font_color = Color(0.501961, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n7rrs"]
+bg_color = Color(0.596078, 0.780392, 0.709804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7gd3"]
+bg_color = Color(0.12549, 0.494118, 0.384314, 0.984314)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="GDScript" id="GDScript_coo0a"]
+script/source = "extends Button
+"
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dlfuu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.854902, 0.831373, 0.709804, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -215.0
+offset_right = 754.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_risgo")
+text = "Awas ada Setan!"
+label_settings = SubResource("LabelSettings_av01o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 191.0
+offset_top = -246.5
+offset_right = 697.0
+offset_bottom = 246.5
+grow_vertical = 2
+texture = ExtResource("3_etqf0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 575.0
+offset_right = 1444.0
+offset_bottom = 703.0
+theme_override_colors/font_hover_color = Color(0.207843, 0.207843, 0.207843, 0.87451)
+theme_override_colors/font_focus_color = Color(0.352941, 0.596078, 0.576471, 0.92549)
+theme_override_font_sizes/font_size = 60
+theme_override_styles/hover = SubResource("StyleBoxFlat_n7rrs")
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7gd3")
+text = "PLAY"
+script = SubResource("GDScript_coo0a")
+
+[connection signal="pressed" from="Button" to="." method="_on_play_pressed"]

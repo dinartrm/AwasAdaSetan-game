@@ -1,0 +1,15 @@
+res://aas_game.tscn
+res://mob.tscn
+res://player.tscn
+res://gameover.tscn
+res://control.tscn
+res://scenes/aas_game.tscn
+res://scenes/mob.tscn
+res://scenes/player.tscn
+res://scenes/control.tscn
+res://scripts/aas_game.gd
+res://scripts/gameover.gd
+res://scripts/main_menu.gd
+res://scripts/mob.gd
+res://scripts/senjata.gd
+res://scenes/menu.tscn

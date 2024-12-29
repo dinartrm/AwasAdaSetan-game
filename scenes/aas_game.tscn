@@ -1,0 +1,246 @@
+[gd_scene load_steps=7 format=3 uid="uid://8cudix4bbqyp"]
+
+[ext_resource type="Script" path="res://scripts/aas_game.gd" id="1_xebfb"]
+[ext_resource type="PackedScene" uid="uid://duhxf584q4y07" path="res://scenes/player.tscn" id="2_kv12s"]
+[ext_resource type="PackedScene" uid="uid://ddong420siktp" path="res://scenes/kuburan.tscn" id="3_vodph"]
+[ext_resource type="PackedScene" uid="uid://secnankmlfk" path="res://scenes/pinetree.tscn" id="4_414fq"]
+[ext_resource type="PackedScene" uid="uid://bm120v1b8eamn" path="res://scenes/gameover.tscn" id="5_vmpek"]
+
+[sub_resource type="Curve2D" id="Curve2D_sq5wo"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -126, -151, 0, 0, 0, 0, 2087, -159, 0, 0, 0, 0, 2090, 1245, 0, 0, 0, 0, -129, 1240, 0, 0, 0, 0, -126, -151)
+}
+point_count = 5
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_xebfb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.0313726, 0.0235294, 0.529412)
+
+[node name="Player" parent="." instance=ExtResource("2_kv12s")]
+position = Vector2(975, 587)
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-975, -587)
+curve = SubResource("Curve2D_sq5wo")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-126, -151)
+rotation = -0.00361499
+
+[node name="Kuburan" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(306, 764)
+
+[node name="Kuburan2" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(658, 307)
+
+[node name="Kuburan3" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1022, 332)
+
+[node name="Kuburan4" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1550, 497)
+
+[node name="Kuburan13" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2133, 1226)
+
+[node name="Kuburan14" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(855, -250)
+
+[node name="Kuburan15" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2252, -120)
+
+[node name="Kuburan16" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(-571, 253)
+
+[node name="Kuburan17" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2421, 384)
+
+[node name="Kuburan18" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(-504, 938)
+
+[node name="Kuburan28" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2613, 1588)
+
+[node name="Kuburan29" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2891, 536)
+
+[node name="Kuburan30" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(-933, 123)
+
+[node name="Kuburan25" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(136, 1747)
+
+[node name="Kuburan26" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(-441, 1413)
+
+[node name="Kuburan27" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(-939, 610)
+
+[node name="Kuburan19" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1347, 1464)
+
+[node name="Kuburan33" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1918, 1911)
+
+[node name="Kuburan20" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1488, -222)
+
+[node name="Kuburan5" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(600, 368)
+
+[node name="Kuburan6" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(508, 823)
+
+[node name="Pinetree" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(223, 347)
+
+[node name="Pinetree2" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(734, 669)
+
+[node name="Pinetree3" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1374, 251)
+
+[node name="Pinetree4" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1331, 702)
+
+[node name="Pinetree15" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2711, 85)
+
+[node name="Pinetree32" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2547, -407)
+
+[node name="Pinetree16" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(941, 1924)
+
+[node name="Pinetree29" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2813, 1081)
+
+[node name="Pinetree30" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-128, -475)
+
+[node name="Pinetree31" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(539, 1918)
+
+[node name="Pinetree17" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-1384, 787)
+
+[node name="Pinetree18" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2066, 611)
+
+[node name="Pinetree19" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-541, -237)
+
+[node name="Pinetree20" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2304, 1353)
+
+[node name="Pinetree21" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(907, -339)
+
+[node name="Pinetree22" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(262, -316)
+
+[node name="Pinetree23" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1733, 1551)
+
+[node name="Pinetree27" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2333, 1738)
+
+[node name="Pinetree28" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1411, 1800)
+
+[node name="Pinetree24" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1823, -220)
+
+[node name="Pinetree25" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-145, 1500)
+
+[node name="Pinetree26" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(437, 1488)
+
+[node name="Pinetree5" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(186, 993)
+
+[node name="Pinetree6" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1724, 978)
+
+[node name="Pinetree7" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(880, 80)
+
+[node name="Kuburan7" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1637, 1043)
+
+[node name="Kuburan8" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1006, 1046)
+
+[node name="Kuburan21" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1295, -498)
+
+[node name="Kuburan31" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1877, -622)
+
+[node name="Kuburan32" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(604, -549)
+
+[node name="Kuburan22" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2160, -419)
+
+[node name="Kuburan23" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(2545, 978)
+
+[node name="Kuburan24" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(882, 1555)
+
+[node name="Kuburan9" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(1661, 583)
+
+[node name="Pinetree8" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(1859, 186)
+
+[node name="Kuburan10" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(24, 525)
+
+[node name="Kuburan11" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(-19, 47)
+
+[node name="Kuburan12" parent="." instance=ExtResource("3_vodph")]
+position = Vector2(700, 1136)
+
+[node name="Pinetree9" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-830, 1272)
+
+[node name="Pinetree10" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-222, 980)
+
+[node name="Pinetree12" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-442, 561)
+
+[node name="Pinetree13" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(2400, 683)
+
+[node name="Pinetree14" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(440, -52)
+
+[node name="Pinetree11" parent="." instance=ExtResource("4_414fq")]
+position = Vector2(-273, 254)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="GameOver" parent="." instance=ExtResource("5_vmpek")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

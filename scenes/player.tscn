@@ -1,0 +1,66 @@
+[gd_scene load_steps=8 format=3 uid="uid://duhxf584q4y07"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_frghe"]
+[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://assets/characters/happy_boo/happy_boo.tscn" id="1_ktmfj"]
+[ext_resource type="PackedScene" uid="uid://bjg8o2m14y0r0" path="res://scenes/senjata.tscn" id="3_jaqun"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_scprp"]
+radius = 29.0689
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bg6nt"]
+radius = 36.0139
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rx4ju"]
+bg_color = Color(0.325441, 0.325441, 0.325441, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lgpkh"]
+bg_color = Color(1, 0.835294, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(0, 1)
+platform_floor_layers = 4294967040
+script = ExtResource("1_frghe")
+
+[node name="HappyBoo" parent="." instance=ExtResource("1_ktmfj")]
+unique_name_in_owner = true
+position = Vector2(-2, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -3)
+shape = SubResource("CircleShape2D_scprp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Senjata" parent="." instance=ExtResource("3_jaqun")]
+position = Vector2(-1, -40)
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(-2, -1)
+shape = SubResource("CircleShape2D_bg6nt")
+debug_color = Color(0.92207, 0.261501, 0.250802, 0.42)
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -76.0
+offset_top = -127.0
+offset_right = 62.0
+offset_bottom = -108.0
+theme_override_styles/background = SubResource("StyleBoxFlat_rx4ju")
+theme_override_styles/fill = SubResource("StyleBoxFlat_lgpkh")
+value = 100.0
+show_percentage = false
+
+[connection signal="health_depleted" from="." to="." method="_on_health_depleted"]
